@@ -1,22 +1,28 @@
-mixin listItem(item, iconClass)
-  li.nav__item 
-    a(href="#"+ item.toLowerCase()).nav__link
-      i(class=iconClass)
-      #{item}
+mixin listItem(item, nameIcon, idItem, active)
+  li.nav__item
+    -if(idItem == '')
+      a(href="#"+ item.toLowerCase() class="nav__link "+ active)
+        +icon(nameIcon, 'nav__icon')
+        |#{item}
+    -else
+      a(href="#"+ idItem class="nav__link "+ active)
+        +icon(nameIcon, 'nav__icon')
+        |#{item}
 
 header.header#header 
-  nav.nav.container 
+  nav.nav.container
     a(href="#").nav__logo #{name}
     .nav__menu#nav-menu
       ul.nav__list.grid
-        +listItem('Home',#{homeIcon})
-        +listItem('User',#{userIcon})
-        +listItem('About',#{aboutIcon})
-        +listItem('Skills',#{skillsIcon})
-        +listItem('Services',#{servicesIcon})
-        +listItem('Portfolio',#{portfolioIcon})
-        +listItem('Contact me',#{contactMeIcon})
-      i(class=#{closeMenuIcon}).nav__close#nav-close
+        +listItem('Home',homeIcon, '','active-link')
+        +listItem('About',userIcon,'','')
+        +listItem('Skills',skillsIcon,'','')
+        +listItem('Services',servicesIcon,'','')
+        +listItem('Portfolio',portfolioIcon,'','')
+        +listItem('Contact me',contactMeIcon, 'contact','')
+      // Close Menu Icon
+      i.nav__icon.nav__close#nav-close
+        span(class='material-icons') #{closeIcon}
     .nav__btns
-      .nav__toggle#nav__toggle
-        i(class=#{appIcon})
+      .nav__toggle#nav-toggle
+        +icon(appsIcon, 'nav__icon')

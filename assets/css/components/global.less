@@ -1,69 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-//!  FontAwesome
-@import '../../fontawesome/less/fontawesome.less';
-@import '../../fontawesome/less/solid.less';
-@import '../../fontawesome/less/brands.less';
-
-@header-height: 3rem;
-
-//!  Colors
-@hue-color: 250; /* Purple 250 - Green 142 - Blue 230 - ¨Pink 340 */
-
-//* HSL color mode
-@first-color: hsl(@hue-color, 69%, 61%);
-@first-color-second: hsl(@hue-color, 69%, 61%);
-@first-color-alt: hsl(@hue-color, 57%, 53%);
-@first-color-lighter: hsl(@hue-color, 92%, 85%);
-@title-color: hsl(@hue-color, 8%, 15%);
-@text-color: hsl(@hue-color, 8%, 45%);
-@text-color-light: hsl(@hue-color, 8%, 65%);
-@input-color: hsl(@hue-color, 70%, 96%);
-@body-color: hsl(@hue-color, 60%, 99%);
-@container-color: #fff;
-
-//! Font and Typography
-@body-font: 'Poppins', sans-serif;
-
-// * .5rem = 8px, 1rem = 16px, 1.5rem = 24px ...
-@big-font-size: 2rem;
-@h1-font-size: 1.5rem;
-@h2-font-size: 1.25rem;
-@h3-font-size: 1.125rem;
-@normal-font-size: 1.125rem;
-@small-font-size: 0.938rem;
-@smaller-font-size: 0.75rem;
-
-// * Font weight
-@font-medium: 500;
-@font-semi-bold: 600;
-
-//! Bottom Margins
-//*  .25rem = 4px, .5rem = 8px, .75rem = 12px ...
-@mb-0-25: 0.25rem;
-@mb-0-5: 0.5rem;
-@mb-0-75: 0.75rem;
-@mb-1: 1rem;
-@mb-1-5: 1.5rem;
-@mb-2: 2rem;
-@mb-2-5: 2.5rem;
-@mb-3: 3rem;
-
-//! z index
-@z-tooltip: 10;
-@z-fixed: 100;
-@z-modal: 1000;
-
-//! Font size for large devices
-@media screen and (min-width: 968px) {
-	@big-font-size: 3rem;
-	@h1-font-size: 2.25rem;
-	@h2-font-size: 1.5rem;
-	@h3-font-size: 1.25rem;
-	@normal-font-size: 1rem;
-	@small-font-size: 0.875rem;
-	@smaller-font-size: 0.813rem;
-}
+@import './global-vars/colors.less';
+@import './global-vars/imports.less';
+@import './global-vars/typography.less';
+@import './global-vars/position.less';
 
 //! BASE
 * {
@@ -107,7 +45,7 @@ img {
 	height: auto;
 }
 
-//! REUSABLE CSS CLASSES
+//! Section
 .section {
 	padding: 2rem 0 4rem;
 	&__title {
@@ -126,4 +64,104 @@ img {
 	}
 }
 
+//! Buttons
+.button {
+	display: inline-block;
+	background-color: @first-color;
+	color: aliceblue;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	font-weight: @font-medium;
+	&:hover {
+		background-color: @first-color-alt;
+	}
 
+	& &__icon {
+		font-size: 1.25rem;
+		margin-left: @mb-0-5;
+		transition: 0.3s;
+	}
+
+	&--white {
+		background-color: white;
+		color: @first-color;
+
+		&:hover {
+			background-color: white;
+			transition: 0.4s;
+			transform: scale(1.025);
+		}
+	}
+
+	&--flex {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&--small {
+		padding: 0.75rem 1rem;
+	}
+
+	&--link {
+		padding: 0;
+		background-color: transparent;
+		color: @first-color;
+
+		&:hover {
+			background-color: transparent;
+			color: @first-color-alt;
+		}
+	}
+}
+
+//! Icons
+.icon(@urlImage) {
+	display: block;
+	background-image: url(@urlImage);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 1.8rem;
+	height: 1.8rem;
+	cursor: pointer;
+}
+
+.github {
+	.icon('/assets/images/icons/Github.svg');
+}
+.linkedin {
+	.icon('/assets/images/icons/LinkedIN.svg');
+}
+
+//! Animation
+.fadeout {
+	animation: fadeout 1s forwards;
+}
+
+.fadein {
+	animation: fadein 1s forwards;
+}
+
+@keyframes fadeout {
+	0% {
+		display: block;
+		opacity: 1;
+	}
+
+	100% {
+		display: none;
+		opacity: 0;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	100% {
+		display: block;
+		opacity: 1;
+	}
+}

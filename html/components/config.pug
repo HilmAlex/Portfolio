@@ -1,10 +1,61 @@
 -var name = 'Alex'
--var homeIcon = 'uit uit-house-user'
--var userIcon ='uit uit-house-user'
--var aboutIcon ='uit uit-house-user'
--var skillsIcon ='uit uit-house-user'
--var servicesIcon ='uit uit-house-user'
--var portfolioIcon ='uit uit-house-user'
--var contactMeIcon ='uit uit-house-user'
--var closeMenuIcon ='fas fa-times'
--var appsIcon = 'fas fa-bars'
+
+//- Google Icons
+
+//- Header
+-var homeIcon = 'home'
+-var userIcon ='account_circle'
+-var skillsIcon ='description'
+-var servicesIcon ='work_outline'
+-var portfolioIcon ='collections'
+-var contactMeIcon ='send'
+-var closeIcon ='close'
+-var appsIcon = 'apps'
+-var darkModeIcon = 'dark_mode'
+
+//- Main
+-var facebookIcon = 'facebook'
+-var mouseIcon = 'mouse'
+-var downloadIcon = 'file_download'
+
+//- Skills
+-var frontendIcon = 'code'
+-var backendIcon = 'dns'
+-var designerIcon = 'brush'
+
+-var frontendSkills = {'HTML':'60%','CSS':'80%','JavaScript':'90%'}
+-var backendSkills = {'Java':'60%','NodeJs':'80%','SQL':'60%'}
+-var designerSkills = {'Figma':'60%','Photoshop':'80%','Canva':'90%'}
+
+//- Arrows
+-var upArrowIcon = 'arrow_upward'
+-var downArrowIcon = 'arrow_downward'
+-var rightArrowIcon = 'arrow_forward'
+-var downAngleIcon = 'expand_more'
+-var rightAngleIcon = 'navigate_next'
+-var leftAngleIcon = 'navigate_before'
+
+-var graduationIcon = 'school'
+-var calendarIcon = 'date_range'
+-var gridIcon = 'table_chart'
+-var checkCircleIcon = 'check_circle'
+
+-var starIcon = 'star_rate'
+-var phoneIcon = 'call'
+-var emailIcon = 'email'
+-var locationIcon = 'location_on'
+
+//- Mixins
+
+//- Google Icon
+mixin icon(nameIcon, anotherClass, id)
+  -if(id)
+    span(class='material-icons '+anotherClass id=id) #{nameIcon}
+  -else
+    span(class='material-icons '+anotherClass) #{nameIcon}
+
+mixin socialLink(href, className)
+  a(href=href class=className target=_blank)
+
+
+
