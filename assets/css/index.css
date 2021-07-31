@@ -1035,6 +1035,9 @@ img {
   .footer__container {
     padding: 0;
   }
+  .home__content {
+    padding: 0;
+  }
   .home__title {
     font-size: 3.5rem;
   }
