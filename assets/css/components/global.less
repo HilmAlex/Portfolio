@@ -115,22 +115,35 @@ img {
 }
 
 //! Icons
-.icon(@urlImage) {
+.icon(@srcImage) {
 	display: block;
-	background-image: url(@urlImage);
+	background-image: url(@srcImage);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
 	width: 1.8rem;
 	height: 1.8rem;
 	cursor: pointer;
+	&:hover {
+		transition: 0.4s;
+		transform: scale(1.1);
+	}
 }
 
+@url-environment: '';
+@src-linkedin: '@{url-environment}/assets/images/icons/linkedin.svg';
+@src-git: '@{url-environment}/assets/images/icons/github.svg';
+@src-facebook: '@{url-environment}/assets/images/icons/facebook.svg';
+
 .github {
-	.icon('/portfolio/assets/images/icons/Github.svg');
+	.icon(@src-git);
 }
 .linkedin {
-	.icon('/portfolio/assets/images/icons/LinkedIN.svg');
+	.icon(@src-linkedin);
+}
+
+.facebook {
+	.icon(@src-facebook);
 }
 
 //! Animation
