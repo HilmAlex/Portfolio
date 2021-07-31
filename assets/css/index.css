@@ -292,7 +292,7 @@ img {
   grid-template-columns: max-content;
   row-gap: 1rem;
 }
-.home__social:hover {
+.home__social-icon:hover {
   transition: 0.6s;
   transform: scale(1.2);
 }
@@ -999,6 +999,15 @@ img {
   }
   .portfolio__content {
     column-gap: 5rem;
+  }
+  .project__container {
+    grid-template-columns: 1fr;
+  }
+  .project__data {
+    text-align: center;
+  }
+  .project__img {
+    width: 260px;
   }
   .portfolio__container .swiper-portfolio-icon {
     font-size: 3.5rem;
