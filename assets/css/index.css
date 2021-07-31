@@ -812,7 +812,7 @@ img {
     font-size: 1.125rem;
   }
   .qualification__data {
-    gap: 0.5re;
+    gap: 0.5rem;
   }
   .services__container {
     grid-template-columns: max-content;
@@ -1094,6 +1094,20 @@ img {
   }
   .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: -4.5rem !important;
+  }
+  .testimonial__data,
+  .testimonial__header {
+    flex-direction: row;
+    align-items: center;
+  }
+  .testimonial__data {
+    text-align: initial;
+  }
+  .testimonial__data div:last-child {
+    margin-right: 30px;
+  }
+  .testimonial__header > div {
+    margin-left: 20px;
   }
   .contact__form {
     width: 480px;
