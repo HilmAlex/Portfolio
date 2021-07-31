@@ -112,7 +112,7 @@ img {
 }
 .github {
   display: block;
-  background-image: url('/assets/images/icons/github.svg');
+  background-image: url('/portfolio/assets/images/icons/github.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -126,7 +126,7 @@ img {
 }
 .linkedin {
   display: block;
-  background-image: url('/assets/images/icons/linkedin.svg');
+  background-image: url('/portfolio/assets/images/icons/linkedin.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -140,7 +140,7 @@ img {
 }
 .facebook {
   display: block;
-  background-image: url('/assets/images/icons/facebook.svg');
+  background-image: url('/portfolio/assets/images/icons/facebook.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
