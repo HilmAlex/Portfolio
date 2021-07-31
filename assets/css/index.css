@@ -112,7 +112,7 @@ img {
 }
 .github {
   display: block;
-  background-image: url('assets/images/icons/Github.svg');
+  background-image: url('/portfolio/assets/images/icons/Github.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -122,7 +122,7 @@ img {
 }
 .linkedin {
   display: block;
-  background-image: url('assets/images/icons/LinkedIN.svg');
+  background-image: url('/portfolio/assets/images/icons/LinkedIN.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
